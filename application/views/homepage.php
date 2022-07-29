@@ -46,13 +46,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </nav>
         <!-- Header-->
-        <header class="bg-dark py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
+        <header>
+        <div class="overlay"></div>
+
+        
+
+
+        <video  preload="" playsinline="" autoplay="" muted="" loop="" __idm_id__="2670593">
+<source src="https://hijacksandals.com/wp-content/uploads/2022/06/2022_Hijack-Sandals_Rebranding-Motion-Logo_Launch_Web-2.mp4" type="video/mp4">	</video>
+
+<div class="container h-100">
+<div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
                     <h1 class="display-4 fw-bolder">Crooked Ind</h1>
                     <p class="lead fw-normal text-white-50 mb-0">COK</p>
                 </div>
             </div>
+</div>
+            
         </header>
         <!-- Section-->
         <section class="py-5">

@@ -9,6 +9,6 @@ class Home extends CI_Controller {
 	
 	public function detailproduct()
 	{
-		$this->load->view('detailbarang');
+		$this->load->view('testdetail');
 	}
 }
