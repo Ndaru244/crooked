@@ -51,8 +51,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container h-100">
 <div class="d-flex h-100 text-center align-items-center">
                 <div class="w-100 text-white">
-                    <h1 class="display-4 fw-bolder">Crooked Ind</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">COK</p>
+                <h1 class="display-4 fw-bolder">Crooked Indonesia</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">📍Citra Raya, Tangerang, Banten</p>
                 </div>
             </div>
 </div>
