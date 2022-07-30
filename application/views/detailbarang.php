@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="<?= base_url() ?>assets/css/coba.css" rel="stylesheet" /> 
+        <link href="<?= base_url() ?>assets/css/detail.css" rel="stylesheet" /> 
     </head>
     <body>
         <!-- Navigation-->
