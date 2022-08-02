@@ -16,4 +16,9 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('testdetail');
 	}
+
+	public function about()
+	{
+		$this->load->view('aboutpage');
+	}
 }

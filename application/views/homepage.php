@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?= base_url('' ) ?>">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?= base_url('home/about' ) ?>">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="<?= base_url('home/shopping' ) ?>">Shop</a></li>
                         </li>
                     </ul>
