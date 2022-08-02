@@ -23,8 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="<?= base_url('' ) ?>">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?= base_url('home/about' ) ?>">About</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -59,10 +59,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
                         <div class="d-flex">
-                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
                             <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                                <i class="bi-cart-fill me-1"></i>
-                                Add to cart
+                                <i class="bi bi-shop"></i>
+                                Tokopedia
+                            </button>
+                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                <i class="bi bi-shop"></i>
+                                Shopee
+                            </button>
+                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                <i class="bi bi-shop"></i>
+                                Tiktok
                             </button>
                         </div>
                     </div>

@@ -7,4 +7,14 @@ class About extends CI_Controller {
 	{
 		$this->load->view('aboutpage');
 	}
+
+	public function homepage()
+	{
+		$this->load->view('homepage');
+	}
+
+	public function shopping()
+	{
+		$this->load->view('testdetail');
+	}
 }
