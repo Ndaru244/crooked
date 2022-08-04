@@ -11,18 +11,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <meta name="author" content="" />
     <title>Shop Homepage - Start Bootstrap Template</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/logocrookedputih.jpg" />
+    <link rel="icon" type="image/x-icon" href="assets/assets/favicon.ico" />
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="assets/css/homepage.css" rel="stylesheet" />
+    <link href="<?= base_url() ?>assets/css/homepage.css" rel="stylesheet" />
 </head>
 
 <body>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
-            
             <a class="navbar-brand" href="#!">Crooked Indonesia</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -61,10 +60,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
         <div class="container h-100">
             <div class="d-flex h-100 text-center align-items-center">
-                <div class="w-100 text-white">
+                <!-- <div class="w-100 text-white">
                     <h1 class="display-4 fw-bolder">Crooked Indonesia</h1>
                     <p class="lead fw-normal text-white-50 mb-0">📍Citra Raya, Tangerang, Banten</p>
-                </div>
+                </div> -->
             </div>
         </div>
 

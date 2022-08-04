@@ -52,13 +52,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img class="img-thumbnail" src="<?= base_url() ?>assets/test3.jpg" width="500">
+                    <img class="img-thumbnail" src="<?= base_url() ?>assets/about.jpg" width="500">
                 </div>
                 <div class="col-md-6">
                     <h2 class="mt-40">About Our Shop</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius enim, accusantium repellat ex autem numquam iure officiis facere vitae itaque.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam qui vel cupiditate exercitationem, ea fuga est velit nulla culpa modi quis iste tempora non, suscipit repellendus labore voluptatem dicta amet?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam qui vel cupiditate exercitationem, ea fuga est velit nulla culpa modi quis iste tempora non, suscipit repellendus labore voluptatem dicta amet?</p>
+                    <All>We hope you enjoy your purchase. All of our product are crafted with an obsessive attention to detail.
+                    we'd love to hear your thoughts, or see pictures</p>
                     <br>
                     </br>
                     <br>
