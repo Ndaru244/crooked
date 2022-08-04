@@ -11476,6 +11476,56 @@ textarea.form-control-lg {
 .heroSliderArrow.nextArrow {
   right: 20px;
 }
+
+.btn-outline-tokopedia {
+  color: #03AC0E;
+  border-color: #03AC0E;
+}
+.btn-outline-tokopedia:hover {
+  color: #fff;
+  background-color: #03AC0E;
+  border-color: #03AC0E;
+}
+.btn-check:focus + .btn-outline-tokopedia, .btn-outline-tokopedia:focus {
+  box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.5);
+}
+.btn-check:checked + .btn-outline-tokopedia, .btn-check:active + .btn-outline-tokopedia, .btn-outline-tokopedia:active, .btn-outline-tokopedia.active, .btn-outline-tokopedia.dropdown-toggle.show {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+}
+.btn-check:checked + .btn-outline-tokopedia:focus, .btn-check:active + .btn-outline-tokopedia:focus, .btn-outline-tokopedia:active:focus, .btn-outline-tokopedia.active:focus, .btn-outline-tokopedia.dropdown-toggle.show:focus {
+  box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.5);
+}
+.btn-outline-tokopedia:disabled, .btn-outline-tokopedia.disabled {
+  color: #212529;
+  background-color: transparent;
+}
+
+.btn-outline-shopee {
+  color: #EE4D2D;
+  border-color: #EE4D2D;
+}
+.btn-outline-shopee:hover {
+  color: #fff;
+  background-color: #EE4D2D;
+  border-color: #EE4D2D;
+}
+.btn-check:focus + .btn-outline-shopee, .btn-outline-shopee:focus {
+  box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.5);
+}
+.btn-check:checked + .btn-outline-shopee, .btn-check:active + .btn-outline-shopee, .btn-outline-shopee:active, .btn-outline-shopee.active, .btn-outline-shopee.dropdown-toggle.show {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+}
+.btn-check:checked + .btn-outline-shopee:focus, .btn-check:active + .btn-outline-shopee:focus, .btn-outline-shopee:active:focus, .btn-outline-shopee.active:focus, .btn-outline-shopee.dropdown-toggle.show:focus {
+  box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.5);
+}
+.btn-outline-shopee:disabled, .btn-outline-shopee.disabled {
+  color: #212529;
+  background-color: transparent;
+}
 @media (max-width: 768px) {
   .heroSliderArrow {
     display: none !important;
