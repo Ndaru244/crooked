@@ -14,7 +14,7 @@ class Home extends CI_Controller {
 
 	public function shopping()
 	{
-		$this->load->view('testdetail');
+		$this->load->view('shoppage');
 	}
 
 	public function about()

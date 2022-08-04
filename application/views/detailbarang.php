@@ -11,9 +11,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assetss/assets/favicon.ico" />
         <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- CSS-->
         <link href="<?= base_url() ?>assets/css/detail.css" rel="stylesheet" /> 
+        <!-- CSS Icon-->
+        <link href="<?= base_url() ?>assets/css/icon.css" rel="stylesheet" /> 
     </head>
     <body>
         <!-- Navigation-->
@@ -28,20 +30,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">All Products</a></li>
+                                <li><a class="dropdown-item" href="<?= base_url('home/shopping') ?>">All Products</a></li>
                                 <li><hr class="dropdown-divider" /></li>
                                 <li><a class="dropdown-item" href="#!">Popular Items</a></li>
                                 <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
-                    </form>
                 </div>
             </div>
         </nav>
@@ -59,15 +54,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
                         <div class="d-flex">
-                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                            <button class="btn btn-outline-tokopedia  flex-shrink-0 m-1"  type="button">
                                 <i class="bi bi-shop"></i>
                                 Tokopedia
                             </button>
-                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
+
+                            
+                            <button class="btn btn-outline-shopee flex-shrink-0 m-1"  type="button">
                                 <i class="bi bi-shop"></i>
                                 Shopee
                             </button>
-                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                            <button class="btn btn-outline-dark flex-shrink-0 m-1" type="button">
                                 <i class="bi bi-shop"></i>
                                 Tiktok
                             </button>
