@@ -28,12 +28,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="<?= base_url() ?>">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="<?= base_url('main/about') ?>">About</a></li>
+                    <li class="nav-item"><a class="nav-link <?php if($this->uri->segment(1)==""){echo "active";} ?>" aria-current="page" href="<?= base_url() ?>">Home</a></li>
+                    <li class="nav-item"><a class="nav-link <?php if($this->uri->segment(1)=="about"){echo "active";} ?>" href="<?= base_url('about') ?>">About</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="<?= base_url('main/shopping') ?>" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                        <a class="nav-link dropdown-toggle <?php if($this->uri->segment(1)=="shopping"){echo "active";} ?>" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="<?= base_url('main/shopping') ?>">All Products</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('shopping') ?>">All Products</a></li>
                             <li>
                                 <hr class="dropdown-divider" />
                             </li>
