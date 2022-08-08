@@ -1,11 +1,11 @@
 <!-- Bingung cok gimana caranya biar kek homepage -->
 
-<!-- <section class="py-5">
-    <div class="overlay"></div>
+<header>
+<div class="overlay" sty></div>
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
-    <video preload="" playsinline="" autoplay="" muted="" loop="" __idm_id__="2670593"  height="1000">
+    <div class="carousel-item active" >
+    <video preload="" playsinline="" autoplay="" muted="" loop="" __idm_id__="2670593">
             <source src="https://hijacksandals.com/wp-content/uploads/2022/06/2022_Hijack-Sandals_Rebranding-Motion-Logo_Launch_Web-2.mp4" type="video/mp4">
         </video>
     </div>
@@ -25,8 +25,7 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-</section> -->
-
+</header>
 
 
     <section class="py-5">

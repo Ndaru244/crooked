@@ -58,3 +58,4 @@ $route['about'] = 'main/about';
 $route['detail'] = 'main/detailproduct';
 $route['detail'] = 'main/detailproduct';
 $route['shopping'] = 'main/shopping';
+$route['koleksi'] = 'main/koleksi';

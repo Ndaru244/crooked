@@ -3,7 +3,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="widget">
-                        <h6 class="widget-title">Short By</h6>
+                        <h6 class="widget-title">Sort By</h6>
                         <form method="post" action="#">
                             <select class="form-control">
                                 <option>Latest</option>
@@ -14,18 +14,8 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-md-9">
-                    <div class="row">
-
-                    </div>
-                </div>
-
             </div>
-
-
         </div>
-
-
     </section>
 
 

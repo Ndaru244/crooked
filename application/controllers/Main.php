@@ -19,7 +19,7 @@ class Main extends CI_Controller {
 	public function shopping()
 	{
 		$this->load->view('layout/header');
-		$this->load->view('content/koleksipage');
+		$this->load->view('content/shoppage');
 		$this->load->view('layout/footer');
 	}
 
