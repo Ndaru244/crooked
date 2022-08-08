@@ -1,74 +1,34 @@
-<?php
-defined('BASEPATH') or exit('No direct script access allowed');
-?>
-<!DOCTYPE html>
-<html lang="en">
+<!-- Bingung cok gimana caranya biar kek homepage -->
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Shop Homepage - Start Bootstrap Template</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/assets/favicon.ico" />
-    <!-- Bootstrap icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="<?= base_url() ?>assets/css/homepage.css" rel="stylesheet" />
-</head>
-
-<body>
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!">Crooked Indonesia</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="<?= base_url('home/index') ?>">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="<?= base_url('home/about') ?>">About</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="<?= base_url('home/shopping') ?>" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="<?= base_url('home/shopping') ?>">All Products</a></li>
-                            <li>
-                                <hr class="dropdown-divider" />
-                            </li>
-                            <li><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#!">Kategori</a></li>
-                            <li>
-                                <hr class="dropdown-divider" />
-                            </li>
-                            <li><a class="dropdown-item" href="#!">Koleksi</a></li>
-                            <li><a class="dropdown-item" href="#!">Sale</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Header-->
-    <header>
-        <div class="overlay"></div>
-
-
-
-
-        <video preload="" playsinline="" autoplay="" muted="" loop="" __idm_id__="2670593">
+<!-- <section class="py-5">
+    <div class="overlay"></div>
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <video preload="" playsinline="" autoplay="" muted="" loop="" __idm_id__="2670593"  height="1000">
             <source src="https://hijacksandals.com/wp-content/uploads/2022/06/2022_Hijack-Sandals_Rebranding-Motion-Logo_Launch_Web-2.mp4" type="video/mp4">
         </video>
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</section> -->
 
-        <div class="container h-100">
-            <div class="d-flex h-100 text-center align-items-center">
-                <!-- <div class="w-100 text-white">
-                    <h1 class="display-4 fw-bolder">Crooked Indonesia</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">📍Citra Raya, Tangerang, Banten</p>
-                </div> -->
-            </div>
-        </div>
 
-    </header>
-    <!-- Section-->
+
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
@@ -171,16 +131,4 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </div>
         </div>
     </section>
-    <!-- Footer-->
-    <footer class="py-5 bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p>
-        </div>
-    </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="assets/js/scripts.js"></script>
-</body>
-
-</html>
+   
