@@ -33,7 +33,7 @@ class Main extends CI_Controller {
 	public function koleksi()
 	{
 		$this->load->view('layout/header');
-		$this->load->view('content/koleksipage');
+		$this->load->view('content/test');
 		$this->load->view('layout/footer');
 	}
 }
