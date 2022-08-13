@@ -15,7 +15,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="<?=base_url('')?>/assets/css/main.css" rel="stylesheet" />
+    <link href="<?=base_url('')?>assets/css/main.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="<?=base_url('')?>assets/css/swiper-bundle.min.css">
     
 </head>
 
