@@ -6,15 +6,15 @@
 
 
         <video preload="" playsinline="" autoplay="" muted="" loop="" __idm_id__="2670593">
-            <source src="https://hijacksandals.com/wp-content/uploads/2022/06/2022_Hijack-Sandals_Rebranding-Motion-Logo_Launch_Web-2.mp4" type="video/mp4">
+            <source src="assets/headervid.m4v" type="video/mp4">
         </video>
 
         <div class="container h-100">
             <div class="d-flex h-100 text-center align-items-center">
-                <div class="w-100 text-white">
+                <!-- <div class="w-100 text-white">
                     <h1 class="display-4 fw-bolder">Crooked Indonesia</h1>
                     <p class="lead fw-normal text-white-50 mb-0">📍Citra Raya, Tangerang, Banten</p>
-                </div>
+                </div> -->
             </div>
         </div>
 
