@@ -53,9 +53,20 @@ $route['default_controller'] = 'main';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-/* Front-End  Routers */
+/* Front-End  Routers Pages */
 $route['about'] = 'main/about';
 $route['detail'] = 'main/detailproduct';
 $route['detail'] = 'main/detailproduct';
 $route['shopping'] = 'main/shopping';
 $route['koleksi'] = 'main/koleksi';
+
+/* Front-End Routers Pages */
+$route['login'] = 'auth';
+$route['admin/dashboard'] = 'admin/dashboard';
+$route['admin/product'] = 'admin/dashboard/product';
+$route['admin/product/add'] = 'admin/dashboard/product_add';
+$route['admin/product/detail'] = 'admin/dashboard/product_detail';
+$route['admin/category'] = 'admin/dashboard/category';
+$route['admin/about-setting'] = 'admin/dashboard/about';
+$route['admin/profile'] = 'admin/dashboard/profile';
+$route['admin/profile/security'] = 'admin/dashboard/change_pass';
