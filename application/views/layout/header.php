@@ -13,7 +13,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/logocrookedputih.jpg" />
     <!-- Bootstrap icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="<?=base_url('')?>assets/css/main.css" rel="stylesheet" />
     <!-- Swiper CSS -->
