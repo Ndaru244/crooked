@@ -13,5 +13,6 @@
     <script type="text/javascript" src="<?= base_url('') ?>assets/js/swiper-bundle.min.js"></script>
 <!-- Core theme JS-->
 <script type="text/javascript" src="<?= base_url('') ?>assets/js/script.js"></script>
-    
+<script type="text/javascript" src="<?= base_url('') ?>assets/js/detailpage.js"></script>
+
     </html>
