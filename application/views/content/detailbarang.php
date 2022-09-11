@@ -5,9 +5,9 @@
 
 
                     <div class="col-lg-5 col-md-12 col-12">
-                        <div class="img-fluid w-100"><img id="MainImg" class="card-img-top mb-5 mb-md-0 main-img" src="<?= base_url() ?>assets/var0.jpg" alt="..." /></div>
+                        <div class="img-fluid w-100 img-hover-zoom" id="zoomImg"><img id="MainImg" class="card-img-top mb-5 mb-md-0 main-img" src="<?= base_url() ?>assets/var0.jpg" alt="..." /></div>
 
-                        <div class="small-img-group">
+                        <div class="small-img-group mt-2">
                             <div class="small-img-col">
                                 <img class="card-img-top mb-5 mb-md-0" id="small-img" src="<?= base_url() ?>assets/var0.jpg" alt="..." />
                             </div>
