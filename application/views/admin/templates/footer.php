@@ -41,15 +41,26 @@
 <script src="<?=base_url()?>assets/admin/plugins/select2/js/select2.full.min.js"></script>
 <!-- Summernote -->
 <script src="<?=base_url()?>assets/admin/plugins/summernote/summernote-bs4.min.js"></script>
+<!-- bs-custom-file-input -->
+<script src="<?=base_url()?>assets/admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 <!-- overlayScrollbars -->
 <script src="<?=base_url()?>assets/admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?=base_url()?>assets/admin/dist/js/adminlte.js"></script>
 <!-- Page specific script -->
 <script>
+  imgInp.onchange = evt => {
+    const [file] = imgInp.files
+    if (file) {
+      blah.src = URL.createObjectURL(file)
+    }
+  };
+</script>
+<script>
   $(function () {
+    // Bs Custom File Input
+    bsCustomFileInput.init();
     // Initialize Select2 Elements
-    
     $('.select2bs4').select2({
       theme: 'bootstrap4'
     });

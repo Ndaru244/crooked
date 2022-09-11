@@ -23,9 +23,19 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
+          <?php if ($this->session->flashdata('sukses')) { ?>
+            <div class="alert alert-success alert-dismissible">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <h5><i class="icon fas fa-thumbs-up"></i> Alert!</h5>
+              <?= 
+              $this->session->flashdata('sukses');
+              $this->session->unset_userdata('sukses'); ?>
+            </div>
+            <?php } ?>
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Data Kategori</h3>
+                <h3 class="card-title"><b>Data Kategori</b></h3>
+                <a href="<?=base_url('admin/category/add')?>" class="btn float-right btn-primary">Tambah Kategori</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -34,24 +44,28 @@
                   <tr>
                     <th>No</th>
                     <th>Nama Kategori</th>
-                    <th>Tools</th>
+                    <th style="width: 40px">Tools</th>
                   </tr>
                   </thead>
                   <tbody>
+                    <?php $no = 1; foreach ($datas as $get) :?>
                   <tr>
-                    <td>1</td>
-                    <td>kat satu</td>
+                    <td><?= $no++ ?></td>
+                    <td><?= $get->category_name ?></td>
                     <td>
-                        <a href="#" class="btn btn-sm btn-success">Edit</a>
-                        <a href="#" class="btn btn-sm btn-danger">Hapus</a>
+                      <div class="row">
+                        <div class="col"><a href="<?= base_url('admin/category/edit/'.$get->id_category) ?>" class="btn btn-block btn-sm btn-success mb-1">Edit</a></div>
+                        <div class="col"><a href="<?= base_url('admin/category/delete/'.$get->id_category) ?>" class="btn btn-block btn-sm btn-danger">Hapus</a></div>
+                      </div>
                     </td>
                   </tr>
+                  <?php endforeach; ?>
                   </tbody>
                   <tfoot>
                   <tr>
                     <th>No</th>
                     <th>Nama Kategori</th>
-                    <th>Tools</th>
+                    <th style="width: 40px">Tools</th>
                   </tr>
                   </tfoot>
                 </table>

@@ -35,14 +35,20 @@
           <!-- small box -->
           <div class="small-box bg-success">
             <div class="inner">
-              <h3>23</h3>
+              <h3>
+                <?php if ($rprd <= 9) {
+                  echo '0'.$rprd;
+                } else {
+                  echo $rprd;
+                } ?>
+              </h3>
 
               <p>Data Produk</p>
             </div>
             <div class="icon">
               <i class="fas fa-boxes"></i>
             </div>
-            <a href="#" class="small-box-footer">Lihat Detail <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="<?= base_url('admin/product') ?>" class="small-box-footer">Lihat Detail <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -50,14 +56,20 @@
           <!-- small box -->
           <div class="small-box bg-olive">
             <div class="inner">
-              <h3>08</h3>
+              <h3>
+              <?php if ($rcat <= 9) {
+                  echo '0'.$rcat;
+                } else {
+                  echo $rcat;
+                } ?>
+            </h3>
 
               <p>Kategori</p>
             </div>
             <div class="icon">
               <i class="fas fa-tags"></i>
             </div>
-            <a href="#" class="small-box-footer">Lihat Detail <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="<?= base_url('admin/category') ?>" class="small-box-footer">Lihat Detail <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

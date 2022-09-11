@@ -24,58 +24,74 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
+                    <?= validation_errors('
+                    <div class="alert alert-danger alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <h5><i class="icon fas fa-ban"></i> Alert!</h5>', '
+                    </div>') ?>
+                    <?php if (isset($error)) {
+                        echo '
+                    <div class="alert alert-danger alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <h5><i class="icon fas fa-ban"></i> Alert!</h5>';
+                        echo ($error);
+                        echo '</div>';
+                    } ?>
                     <div class="card">
+                        <?= form_open_multipart('admin/product/add') ?>
                         <div class="card-header">
                             <h3 class="card-title"><b>Form Tambah Produk</b></h3>
                         </div>
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="">Nama Produk</label>
-                                <input type="text" name="nama_brg" class="form-control" placeholder="Nama Produk" required>
+                                <input type="text" name="product_name" class="form-control" placeholder="Nama Produk" required>
                             </div>
                             <div class="form-group">
                                 <label for="">Harga Produk</label>
-                                <input type="number" name="harga_brg" class="form-control" placeholder="Harga Produk" min=1 required>
+                                <input type="number" name="product_price" class="form-control" placeholder="Harga Produk" min=1 required>
                             </div>
                             <div class="form-group">
                                 <label for="">Kategori Produk</label>
-                                <select class="form-control select2bs4" style="width: 100%;" required>
+                                <select name="id_category" class="form-control select2bs4" style="width: 100%;" required>
                                     <option value="">Pilih Kategori</option>
-                                    <option value="">kat satu</option>
-                                    <option value="">kat dua</option>
-                                    <option value="">kat tiga</option>
+                                    <?php foreach ($data_cat as $get) : ?>
+                                        <option value="<?= $get->id_category ?>"><?= $get->category_name ?></option>
+                                    <?php endforeach ?>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="">Deskripsi Produk</label>
-                                <textarea name="ket_brg" class="form-control" id="summernote" required>Deskripsi</textarea>
+                                <textarea name="product_description" class="form-control" id="summernote" required>Deskripsi</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="">Link Olsop Produk</label>
                                 <div class="row">
-                                    <div class="col-4"><input type="text" name="nama_brg" class="form-control" placeholder="Link Instagram" required></div>
-                                    <div class="col-4"><input type="text" name="nama_brg" class="form-control" placeholder="Link Shopee" required></div>
-                                    <div class="col-4"><input type="text" name="nama_brg" class="form-control" placeholder="Link Tiktok" required></div>
+                                    <div class="col-4"><input type="text" name="link_tokopedia" class="form-control" placeholder="Link Instagram" required></div>
+                                    <div class="col-4"><input type="text" name="link_shopee" class="form-control" placeholder="Link Shopee" required></div>
+                                    <div class="col-4"><input type="text" name="link_tiktok" class="form-control" placeholder="Link Tiktok" required></div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="">Status Onshale Produk</label>
-                                <select class="form-control select2bs4" style="width: 100%;" required>
-                                    <option value="">notsale</option>
-                                    <option value="">onsale</option>
-                                </select>
+                            <div class="form-grup">
+                                <label for="">Upload Gambar</label>
+                                <img class="rounded img-thumbnail mx-auto d-block" id="blah" src="<?= base_url('/assets/admin/dist/img/default-img.png') ?>" alt="..." style="width: 25%;" />
+                                <div class="custom-file">
+                                    <input name="product_picture" accept="image/*" type="file" class="custom-file-input" id="imgInp">
+                                    <label class="custom-file-label" for="customFile">Pilih Gambar</label>
+                                </div>
                             </div>
                         </div>
                         <div class="card-footer">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="" class="btn btn-block btn-danger">Batal</a>
+                                    <a href="<?= base_url("admin/product") ?>" onclick="return confirm('anda yakin ingin kembali ?')" class="btn btn-block btn-danger">Kembali</a>
                                 </div>
                                 <div class="col-6">
                                     <button type="submit" class="btn btn-block btn-primary">Simpan</button>
                                 </div>
                             </div>
                         </div>
+                        <?= form_close() ?>
                         <!-- /.card -->
                     </div>
                     <!-- /.col -->
