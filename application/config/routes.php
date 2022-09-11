@@ -63,10 +63,20 @@ $route['koleksi'] = 'main/koleksi';
 /* Front-End Routers Pages */
 $route['login'] = 'auth';
 $route['admin/dashboard'] = 'admin/dashboard';
+
 $route['admin/product'] = 'admin/dashboard/product';
 $route['admin/product/add'] = 'admin/dashboard/product_add';
-$route['admin/product/detail'] = 'admin/dashboard/product_detail';
+$route['admin/product/detail/(:any)'] = 'admin/dashboard/product_detail/$1';
+$route['admin/product/delete/(:any)'] = 'admin/dashboard/product_delete/$1';
+$route['admin/picture_delete/(:any)'] = 'admin/dashboard/picture_delete/$1';
+
 $route['admin/category'] = 'admin/dashboard/category';
+$route['admin/category/add'] = 'admin/dashboard/category_add';
+$route['admin/category/edit/(:any)'] = 'admin/dashboard/category_edit/$1';
+$route['admin/category/delete/(:any)'] = 'admin/dashboard/category_delete/$1';
+
 $route['admin/about-setting'] = 'admin/dashboard/about';
+$route['admin/about_update/(:any)'] = 'admin/dashboard/about_update/$1';
+
 $route['admin/profile'] = 'admin/dashboard/profile';
 $route['admin/profile/security'] = 'admin/dashboard/change_pass';
