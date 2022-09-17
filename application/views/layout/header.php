@@ -9,7 +9,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Shop Homepage - Start Bootstrap Template</title>
+    <title><?= $title ?></title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/logocrookedputih.jpg" />
     <!-- Bootstrap icons-->
@@ -33,9 +33,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <li class="nav-item"><a class="nav-link <?php if($this->uri->segment(1)==""){echo "active";} ?>" aria-current="page" href="<?= base_url() ?>">Home</a></li>
                     <li class="nav-item"><a class="nav-link <?php if($this->uri->segment(1)=="about"){echo "active";} ?>" href="<?= base_url('about') ?>">About</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle <?php if($this->uri->segment(1)=="shopping"){echo "active";} ?>" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                        <a class="nav-link dropdown-toggle <?php if($this->uri->segment(2)=="shopping"){echo "active";} ?>" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="<?= base_url('shopping') ?>">All Products</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('main/shopping') ?>">All Products</a></li>
                             <li>
                                 <hr class="dropdown-divider" />
                             </li>
