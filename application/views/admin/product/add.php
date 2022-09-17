@@ -67,7 +67,7 @@
                             <div class="form-group">
                                 <label for="">Link Olsop Produk</label>
                                 <div class="row">
-                                    <div class="col-4"><input type="text" name="link_tokopedia" class="form-control" placeholder="Link Instagram" required></div>
+                                    <div class="col-4"><input type="text" name="link_tokopedia" class="form-control" placeholder="Link Tokopedia" required></div>
                                     <div class="col-4"><input type="text" name="link_shopee" class="form-control" placeholder="Link Shopee" required></div>
                                     <div class="col-4"><input type="text" name="link_tiktok" class="form-control" placeholder="Link Tiktok" required></div>
                                 </div>

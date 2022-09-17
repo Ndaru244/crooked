@@ -42,6 +42,11 @@
                 </div>
                 <?php endforeach; ?>
             </div>
+
+        </div>
+
+        <div class="text-center">
+            <a class="btn btn-outline-dark mt-auto" href="<?= base_url('main/shopping') ?>" >Selengkapnya</a>
             
         </div>
     </section>
