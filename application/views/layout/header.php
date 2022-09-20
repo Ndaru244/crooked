@@ -11,7 +11,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <meta name="author" content="" />
     <title><?= $title ?></title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/logocrookedputih.jpg" />
+    <link rel="icon" type="image/x-icon" href="<?= base_url("assets/logocrookedputih.jpg") ?>" />
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->

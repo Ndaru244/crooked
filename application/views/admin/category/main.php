@@ -55,7 +55,7 @@
                     <td>
                       <div class="row">
                         <div class="col"><a href="<?= base_url('admin/category/edit/'.$get->id_category) ?>" class="btn btn-block btn-sm btn-success mb-1">Edit</a></div>
-                        <div class="col"><a href="<?= base_url('admin/category/delete/'.$get->id_category) ?>" class="btn btn-block btn-sm btn-danger">Hapus</a></div>
+                        <div class="col"><a href="<?= base_url('admin/category/delete/'.$get->id_category) ?>" onclick="return confirm('anda yakin ingin menghapus data Kategori <?= $get->category_name ?> ?')" class="btn btn-block btn-sm btn-danger">Hapus</a></div>
                       </div>
                     </td>
                   </tr>
