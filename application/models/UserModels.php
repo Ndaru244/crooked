@@ -33,6 +33,18 @@ class UserModels extends CI_Model
         return $query->result();
     }
 
+    public function countbycat($idcat, $tabel){
+        $this->db->where('id_category',$idcat);
+        $this->db->from($tabel);
+        return $this->db->count_all_results();
+    }
+
+    public function getbycat($idcat, $tabel, $limit, $start){
+        $this->db->where('id_category', $idcat);
+        $query = $this->db->get($tabel, $limit, $start);
+        return $query;
+    }
+
     function pagination($limit, $start){
         $query = $this->db->get('product', $limit, $start);
         return $query;

@@ -56,8 +56,9 @@ $route['translate_uri_dashes'] = FALSE;
 /* Front-End  Routers Pages */
 $route['about'] = 'main/about';
 $route['detail/(:any)'] = 'main/detailproduct/$1';
+$route['main/shopping/category/(:any)'] = 'main/category/$1';
 // $route['shopping'] = 'main/shopping';
-$route['koleksi'] = 'main/koleksi';
+$route['main/shopping/koleksi'] = 'main/koleksi';
 
 /* Front-End Routers Pages */
 $route['login'] = 'auth';
