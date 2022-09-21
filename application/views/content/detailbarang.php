@@ -36,19 +36,36 @@
                             <span>Rp.<?= number_format($datas->product_price, 0, ',', '.') ?></span>
                         </div>
                         <p class="lead"><?= $datas->product_description ?></p>
-                        <div class="d-flex">
-                            <a href="<?= $datas->link_tokopedia ?>" target="_blank" class="btn btn-outline-tokopedia  flex-shrink-0 m-1">
-                                <i class="bi bi-shop"></i>
-                                Tokopedia
-                            </a>
-                            <a href="<?= $datas->link_shopee ?>" target="_blank" class="btn btn-outline-shopee flex-shrink-0 m-1">
-                                <i class="bi bi-shop"></i>
-                                Shopee
-                            </a>
-                            <a href="<?= $datas->link_tiktok ?>" target="_blank" class="btn btn-outline-dark flex-shrink-0 m-1">
-                                <i class="bi bi-shop"></i>
-                                Tiktok
-                            </a>
+                        <div class="row">
+                            <div class="col">
+                                <div class="col mb-2">
+                                    <a href="<?= $datas->link_tokopedia ?>" target="_blank" class="btn btn-block btn-outline-tokopedia">
+                                        <i class="bi bi-shop"></i>
+                                        Tokopedia
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="<?= $datas->link_shopee ?>" target="_blank" class="btn btn-block btn-outline-shopee">
+                                        <i class="bi bi-shop"></i>
+                                        Shopee
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="col mb-2">
+                                    <a href="<?= $datas->link_tiktok ?>" target="_blank" class="btn btn-block btn-outline-dark">
+                                        <i class="bi bi-shop"></i>
+                                        Tiktok
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="<?= $datas->link_lazada ?>" target="_blank" class="btn btn-block btn-outline-dark">
+                                        <i class="bi bi-shop"></i>
+                                        Lazada
+                                    </a>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

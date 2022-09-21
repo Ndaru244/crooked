@@ -99,6 +99,12 @@ class Dashboard extends CI_Controller
             'required',
             array('required' => '%s Harus Diisi')
         );
+        $val->set_rules(
+            'link_lazada',
+            'Link Lazada',
+            'required',
+            array('required' => '%s Harus Diisi')
+        );
 
         if ($val->run()) {
             $config['upload_path'] = './assets/product_images';
@@ -143,6 +149,7 @@ class Dashboard extends CI_Controller
                     'link_tokopedia'        => $this->input->post('link_tokopedia'),
                     'link_shopee'           => $this->input->post('link_shopee'),
                     'link_tiktok'           => $this->input->post('link_tiktok'),
+                    'link_lazada'           => $this->input->post('link_lazada'),
                     'product_picture'       => $upload['upload_data']['file_name']
                 );
 
@@ -160,6 +167,88 @@ class Dashboard extends CI_Controller
         $this->load->view('admin/templates/header', $data);
         $this->load->view('admin/product/add', $data);
         $this->load->view('admin/templates/footer');
+    }
+
+    public function product_edit($id)
+    {
+        $id_product = array('id_product' => $id);
+        $val = $this->form_validation;
+        $val->set_rules(
+            'product_name',
+            'Nama Produk',
+            'required',
+            array('required' => '%s Harus Diisi')
+        );
+        $val->set_rules(
+            'product_price',
+            'Harga',
+            'required',
+            array('required' => '%s Harus Diisi')
+        );
+        $val->set_rules(
+            'id_category',
+            'Kategori',
+            'required',
+            array('required' => '%s Harus Dipilih')
+        );
+        $val->set_rules(
+            'product_description',
+            'Deskripsi',
+            'required',
+            array('required' => '%s Harus Diisi')
+        );
+        $val->set_rules(
+            'link_tokopedia',
+            'Link Tokopedia',
+            'required',
+            array('required' => '%s Harus Diisi')
+        );
+        $val->set_rules(
+            'link_shopee',
+            'Link Shopee',
+            'required',
+            array('required' => '%s Harus Diisi')
+        );
+        $val->set_rules(
+            'link_tiktok',
+            'Link Tiktok',
+            'required',
+            array('required' => '%s Harus Diisi')
+        );
+        $val->set_rules(
+            'link_lazada',
+            'Link Lazada',
+            'required',
+            array('required' => '%s Harus Diisi')
+        );
+
+        if ($val->run() === FALSE) {
+            $get = $this->Models->get_byid($id_product, 'product');
+            $get_cat = $this->Models->get('category');
+            $data = array(
+                'title' => 'Page Produk | Edit',
+                'data_cat' => $get_cat,
+                'datas' => $get
+            );
+
+            $this->load->view('admin/templates/header', $data);
+            $this->load->view('admin/product/edit', $data);
+            $this->load->view('admin/templates/footer');
+        } else {
+            $data = array(
+                'product_name'          => $this->input->post('product_name'),
+                'product_price'         => $this->input->post('product_price'),
+                'id_category'           => $this->input->post('id_category'),
+                'product_description'   => $this->input->post('product_description'),
+                'link_tokopedia'        => $this->input->post('link_tokopedia'),
+                'link_shopee'           => $this->input->post('link_shopee'),
+                'link_tiktok'           => $this->input->post('link_tiktok'),
+                'link_lazada'           => $this->input->post('link_lazada')
+            );
+            $this->Models->put($id_product, 'product', $data);
+            $this->session->set_flashdata('sukses', 'Berhasil mengedit data');
+            redirect(base_url('admin/product'), 'refresh');
+        }
     }
 
     public function product_detail($id)
@@ -260,7 +349,7 @@ class Dashboard extends CI_Controller
     }
     /*End Product*/
 
-    /*Category*/
+    /* Category */
     public function category()
     {
         $get = $this->Models->get('category');
@@ -328,9 +417,6 @@ class Dashboard extends CI_Controller
             $this->session->set_flashdata('sukses', 'Berhasil mengedit data');
             redirect(base_url('admin/category'), 'refresh');
         }
-        $this->load->view('admin/templates/header');
-        $this->load->view('admin/category/edit');
-        $this->load->view('admin/templates/footer');
     }
 
     public function category_delete($id)
@@ -340,7 +426,7 @@ class Dashboard extends CI_Controller
         $this->session->set_flashdata('sukses', 'Berhasil menghapus data');
         redirect(base_url('admin/category'), 'refresh');
     }
-    /*End Category*/
+    /* End Category */
 
     public function about()
     {
@@ -349,15 +435,15 @@ class Dashboard extends CI_Controller
             'title'     => 'Page About',
             'datas'     => $get
         );
-        $this->load->view('admin/templates/header',$data);
-        $this->load->view('admin/about/main',$data);
+        $this->load->view('admin/templates/header', $data);
+        $this->load->view('admin/about/main', $data);
         $this->load->view('admin/templates/footer');
     }
 
     public function about_update($id)
     {
         $val = $this->form_validation;
-        
+
         $val->set_rules(
             'about_text',
             'About',
@@ -389,7 +475,7 @@ class Dashboard extends CI_Controller
             array('required' => '%s Harus Di Isi !!')
         );
         if ($val->run() === FALSE) {
-            redirect(base_url('admin/about-setting'),'refresh');
+            redirect(base_url('admin/about-setting'), 'refresh');
         } else {
             $data = array(
                 'about_text' => $this->input->post('about_text'),

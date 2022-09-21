@@ -3547,6 +3547,21 @@ textarea.form-control-lg {
   border-radius: 0.2rem;
 }
 
+.btn-block {
+  display: block;
+  width: 100%
+}
+
+.btn-block+.btn-block {
+  margin-top: .5rem
+}
+
+input[type=button].btn-block,
+input[type=reset].btn-block,
+input[type=submit].btn-block {
+  width: 100%
+}
+
 .fade {
   transition: opacity 0.15s linear;
 }

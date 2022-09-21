@@ -56,8 +56,9 @@ $route['translate_uri_dashes'] = FALSE;
 /* Front-End  Routers Pages */
 $route['about'] = 'main/about';
 $route['detail/(:any)'] = 'main/detailproduct/$1';
+$route['main/shopping/category/(:any)'] = 'main/category/$1';
 // $route['shopping'] = 'main/shopping';
-$route['koleksi'] = 'main/koleksi';
+$route['main/shopping/koleksi'] = 'main/koleksi';
 
 /* Front-End Routers Pages */
 $route['login'] = 'auth';
@@ -66,6 +67,7 @@ $route['admin/dashboard'] = 'admin/dashboard';
 $route['admin/product'] = 'admin/dashboard/product';
 $route['admin/product/add'] = 'admin/dashboard/product_add';
 $route['admin/product/detail/(:any)'] = 'admin/dashboard/product_detail/$1';
+$route['admin/product/edit/(:any)'] = 'admin/dashboard/product_edit/$1';
 $route['admin/product/delete/(:any)'] = 'admin/dashboard/product_delete/$1';
 $route['admin/picture_delete/(:any)'] = 'admin/dashboard/picture_delete/$1';
 

@@ -27,7 +27,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title"><b>Detail Produk</b></h3>
-                            <button type="submit" class="btn float-right btn-primary">Edit Data Produk</button>
+                            <a href="<?= base_url('admin/product/edit/'.$datas->id_product) ?>" class="btn float-right btn-primary">Edit Data Produk</a>
                         </div>
                         <div class="card-body">
                             <div class="form-group">
@@ -49,9 +49,10 @@
                             <div class="form-group">
                                 <label for="">Link olsop Produk</label>
                                 <div class="row">
-                                    <div class="col-4"><input type="text" name="nama_brg" class="form-control" value="<?= $datas->link_tokopedia ?>" placeholder="Nama Barang" disabled></div>
-                                    <div class="col-4"><input type="text" name="nama_brg" class="form-control" value="<?= $datas->link_shopee ?>" placeholder="Nama Barang" disabled></div>
-                                    <div class="col-4"><input type="text" name="nama_brg" class="form-control" value="<?= $datas->link_tiktok ?>" placeholder="Nama Barang" disabled></div>
+                                    <div class="col"><input type="url" name="nama_brg" class="form-control" value="<?= $datas->link_tokopedia ?>" placeholder="Nama Barang" disabled></div>
+                                    <div class="col"><input type="url" name="nama_brg" class="form-control" value="<?= $datas->link_shopee ?>" placeholder="Nama Barang" disabled></div>
+                                    <div class="col"><input type="url" name="nama_brg" class="form-control" value="<?= $datas->link_tiktok ?>" placeholder="Nama Barang" disabled></div>
+                                    <div class="col"><input type="url" name="nama_brg" class="form-control" value="<?= $datas->link_lazada ?>" placeholder="Nama Barang" disabled></div>
                                 </div>
                             </div>
                             <!-- <div class="form-group">
@@ -59,17 +60,26 @@
                                 <input type="text" name="nama_brg" class="form-control" value="notsale" placeholder="Nama Barang" disabled>
                             </div> -->
                         </div>
-
+                    </div>
+                    <div class="row">
                     </div>
                     <?php if ($this->session->flashdata('sukses')) { ?>
-            <div class="alert alert-success alert-dismissible">
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-              <h5><i class="icon fas fa-thumbs-up"></i> Alert!</h5>
-              <?= 
-              $this->session->flashdata('sukses');
-              $this->session->unset_userdata('sukses'); ?>
-            </div>
-            <?php } ?>
+                        <div class="alert alert-success alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <h5><i class="icon fas fa-thumbs-up"></i> Alert!</h5>
+                            <?=
+                            $this->session->flashdata('sukses');
+                            $this->session->unset_userdata('sukses'); ?>
+                        </div>
+                    <?php } ?>
+                    <?php if (isset($error)) {
+                        echo '
+                    <div class="alert alert-danger alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <h5><i class="icon fas fa-ban"></i> Alert!</h5>';
+                        echo ($error);
+                        echo '</div>';
+                    } ?>
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title"><b>Gambar Produk</b></h3>
@@ -97,9 +107,9 @@
                                             <tr>
                                                 <td><?= $no++ ?></td>
                                                 <td>
-                                                <img class="rounded img-thumbnail mx-auto d-block" src="<?= base_url('/assets/product_images/' . $get->picture) ?>" style="width: 50%;" />
+                                                    <img class="rounded img-thumbnail mx-auto d-block" src="<?= base_url('/assets/product_images/' . $get->picture) ?>" style="width: 50%;" />
                                                 </td>
-                                                <td><a href="<?= base_url('admin/picture_delete/'.$get->id_picture) ?>" class="btn btn-sm btn-danger">Hapus</a></td>
+                                                <td><a href="<?= base_url('admin/picture_delete/' . $get->id_picture) ?>" onclick="return confirm('anda yakin ingin menghapus Gambar ?')" class="btn btn-sm btn-danger">Hapus</a></td>
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>
