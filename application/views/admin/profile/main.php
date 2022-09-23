@@ -20,6 +20,16 @@
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
+            <?php if ($this->session->flashdata('sukses')) { ?>
+            <div class="alert alert-success alert-dismissible">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <h5><i class="icon fas fa-thumbs-up"></i> Alert!</h5>
+              <?= 
+              $this->session->flashdata('sukses');
+              $this->session->unset_userdata('sukses'); ?>
+            </div>
+            <?php } ?>
+            
             <div class="row">
                 <div class="col-md-3">
 
@@ -32,14 +42,14 @@
 
                             <h3 class="profile-username text-center"><?= $current_user->nama_user ?></h3>
 
-                            <p class="text-muted text-center"><?= $current_user->username ?></p>
+                            <p class="text-muted text-center">@<?= $current_user->username ?></p>
 
                             <ul class="list-group list-group-unbordered mb-3">
                                 <li class="list-group-item">
-                                    <b>Pengaturan Profil</b> <a href="<?=base_url('admin/profile')?>" class="float-right">Lihat <i class="fas fa-angle-right"></i></a>
+                                    <b>Pengaturan Profil</b> <a href="<?= base_url('admin/profile/'.$current_user->id_user) ?>" class="float-right">Lihat <i class="fas fa-angle-right"></i></a>
                                 </li>
                                 <li class="list-group-item">
-                                    <b>Pengaturan Password</b> <a href="<?=base_url('admin/profile/security')?>" class="float-right">Lihat <i class="fas fa-angle-right"></i></a>
+                                    <b>Pengaturan Password</b> <a href="<?= base_url('admin/profile/security/'.$current_user->id_user) ?>" class="float-right">Lihat <i class="fas fa-angle-right"></i></a>
                                 </li>
                             </ul>
 
@@ -51,6 +61,7 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-md-9">
+                    <?= form_open('admin/profile/' . $datas->id_user) ?>
                     <div class="card card-primary">
                         <div class="card-header">
                             <h3 class="card-title">Pengaturan Profil</h3>
@@ -59,21 +70,28 @@
                             <form>
                                 <div class="form-group">
                                     <label for="">Nama</label>
-                                        <input type="text" name="nama_user" class="form-control" value="<?= $current_user->nama_user ?>" placeholder="Nama">
+                                    <input type="text" name="nama_user" class="form-control <?= form_error('nama_user') ? 'is-invalid' : '' ?>" value="<?= $datas->nama_user ?>" placeholder="Nama">
+                                    <div class="invalid-feedback">
+                                       <?= form_error('nama_user') ?>
+                                    </div>
                                 </div>
                                 
                                 <div class="form-group">
                                     <label for="">Username</label>
-                                        <input type="text" name="usernmae" class="form-control" value="<?= $current_user->username ?>" placeholder="Username">
+                                    <input type="text" name="username" class="form-control <?= form_error('username') ? 'is-invalid' : '' ?>" value="<?= $datas->username ?>" placeholder="Username">
+                                    <div class="invalid-feedback">
+                                       <?= form_error('username') ?>
+                                    </div>
                                 </div>
                                 
                             </form>
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer">
-                            <button type="submit" class="btn float-right btn-primary">Simpan Perubahan</button>
+                            <button type="submit" onclick="return confirm('anda ingin mengubah data ?')" class="btn float-right btn-primary">Simpan Perubahan</button>
                         </div>
                     </div>
+                    <?= form_close() ?>
                     <!-- /.card -->
                 </div>
                 <!-- /.col -->

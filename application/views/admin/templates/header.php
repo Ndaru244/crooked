@@ -65,7 +65,7 @@
           <i class="fas fa-user-alt"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="<?=base_url('admin/profile')?>" class="dropdown-item">
+          <a href="<?=base_url('admin/profile/'.$current_user->id_user)?>" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
               <img src="<?=base_url()?>assets/admin/dist/img/crooked.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">

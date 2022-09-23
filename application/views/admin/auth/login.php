@@ -42,10 +42,11 @@
               <span class="fas fa-at"></span>
             </div>
           </div>
-        </div>
-        <div class="invalid-feedback">
+          <div class="invalid-feedback">
           <?= form_error('username') ?>
+          </div>
         </div>
+        
         <div class="input-group mb-3 <?= form_error('password') ? 'is-invalid' : '' ?>">
           <input type="password" name="password" class="form-control <?= form_error('password') ? 'is-invalid' : '' ?>" value="<?= set_value('password') ?>" id="password" placeholder="Password">
           <div class="input-group-append" onclick="password_show_hide();">
@@ -54,10 +55,11 @@
               <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
             </div>
           </div>
-        </div>
-        <div class="invalid-feedback">
+          <div class="invalid-feedback">
           <?= form_error('password') ?>
+          </div>
         </div>
+        
         <div class="input-group mb-3">
           <button type="submit" class="btn btn-block btn-primary">Masuk</button>
         </div>

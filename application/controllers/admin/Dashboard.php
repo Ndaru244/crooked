@@ -34,26 +34,78 @@ class Dashboard extends CI_Controller
         $this->load->view('admin/templates/footer');
     }
 
-    public function profile()
+    public function profile($id)
     {
-        $data = array(
-            "current_user" => $this->AuthModel->current_user(),
-            'title' => 'Profil | Settings',
-        );
-        $this->load->view('admin/templates/header',$data);
-        $this->load->view('admin/profile/main',$data);
-        $this->load->view('admin/templates/footer');
+        $id_user = array('id_user' => $id);
+        $val = $this->form_validation;
+        $val->set_rules(
+			'nama_user',
+			'Nama User',
+			'required',
+			array('required' => '%s Harus Di Isi !')
+		);
+		$val->set_rules(
+			'username',
+			'Username',
+			'required',
+			array('required' => '%s Harus Di Isi !')
+		);
+        if ($val->run() === FALSE) {
+            $get = $this->Models->get_byid($id_user, 'users');
+            $data = array(
+                "current_user" => $this->AuthModel->current_user(),
+                'title' => 'Profil | Settings',
+                'datas' => $get
+            );
+            $this->load->view('admin/templates/header',$data);
+            $this->load->view('admin/profile/main',$data);
+            $this->load->view('admin/templates/footer');
+        } else {
+            $data = array(
+                'nama_user' => $this->input->post('nama_user'),
+                'username'  => $this->input->post('username'),
+            );
+            $this->Models->put($id_user, 'users', $data);
+            $this->session->set_flashdata('sukses', 'Berhasil mengedit data');
+            redirect(base_url('admin/profile/'.$id), 'refresh');
+        }
     }
 
-    public function change_pass()
+    public function change_pass($id)
     {
-        $data = array(
-            "current_user" => $this->AuthModel->current_user(),
-            'title' => 'Profil | Security',
-        );
-        $this->load->view('admin/templates/header',$data);
-        $this->load->view('admin/profile/changePass',$data);
-        $this->load->view('admin/templates/footer');
+        $id_user = array('id_user' => $id);
+        $val = $this->form_validation;
+        $val->set_rules(
+			'password',
+			'Password Baru',
+			'required|min_length[6]',
+			array('required' => '%s Harus Di Isi !!', 'min_length' => '%s minimal 6 karakter')
+		);
+		$val->set_rules(
+			'password_confirm',
+			'Konfiramsi Password',
+			'required|min_length[6]|matches[password]',
+			array('required' => '%s Harus Di Isi !', 'min_length' => '%s minimal 6 karakter', 'matches' => '%s tidak sama')
+		);
+        if ($val->run() === FALSE) {
+            $get = $this->Models->get_byid($id_user, 'users');
+            $data = array(
+                "current_user" => $this->AuthModel->current_user(),
+                'title' => 'Profil | Security',
+                'datas' => $get
+            );
+            $this->load->view('admin/templates/header',$data);
+            $this->load->view('admin/profile/changePass',$data);
+            $this->load->view('admin/templates/footer');
+        } else {
+            $data = array(
+                'password' => password_hash($this->input->post('password'),PASSWORD_DEFAULT)
+            );
+            $this->Models->put($id_user, 'users', $data);
+            $this->session->set_flashdata('sukses', 'Berhasil mengubah Password');
+            redirect(base_url('admin/profile/security/'.$id), 'refresh');
+        }
+        
     }
 
     /*Product*/
