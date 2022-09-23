@@ -62,6 +62,7 @@ $route['main/shopping/koleksi'] = 'main/koleksi';
 
 /* Front-End Routers Pages */
 $route['login'] = 'auth';
+$route['logout'] = 'auth/logout';
 $route['admin/dashboard'] = 'admin/dashboard';
 
 $route['admin/product'] = 'admin/dashboard/product';

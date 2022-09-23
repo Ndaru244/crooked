@@ -9,6 +9,13 @@ class Dashboard extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Models');
+        $this->load->model('AuthModel');
+		if(!$this->AuthModel->current_user()){
+            $this->session->set_flashdata('message_login_error','
+            Login Terlebih Dahulu Sebelum Mengakses Dashboard!!
+            ');
+			redirect(base_url('login'));
+        }
     }
 
     public function index()
@@ -17,6 +24,7 @@ class Dashboard extends CI_Controller
         $cat = $this->db->count_all('category');
 
         $data = array(
+            "current_user" => $this->AuthModel->current_user(),
             'title' => 'Dashboard',
             'rprd' => $prd,
             'rcat' => $cat
@@ -28,15 +36,23 @@ class Dashboard extends CI_Controller
 
     public function profile()
     {
-        $this->load->view('admin/templates/header');
-        $this->load->view('admin/profile/main');
+        $data = array(
+            "current_user" => $this->AuthModel->current_user(),
+            'title' => 'Profil | Settings',
+        );
+        $this->load->view('admin/templates/header',$data);
+        $this->load->view('admin/profile/main',$data);
         $this->load->view('admin/templates/footer');
     }
 
     public function change_pass()
     {
-        $this->load->view('admin/templates/header');
-        $this->load->view('admin/profile/changePass');
+        $data = array(
+            "current_user" => $this->AuthModel->current_user(),
+            'title' => 'Profil | Security',
+        );
+        $this->load->view('admin/templates/header',$data);
+        $this->load->view('admin/profile/changePass',$data);
         $this->load->view('admin/templates/footer');
     }
 
@@ -45,6 +61,7 @@ class Dashboard extends CI_Controller
     {
         $get = $this->Models->get('product');
         $data = array(
+            "current_user" => $this->AuthModel->current_user(),
             'title' => 'Page Produk',
             'datas' => $get
 
@@ -119,6 +136,7 @@ class Dashboard extends CI_Controller
             if (!$this->upload->do_upload('product_picture')) {
                 $get_cat = $this->Models->get('category');
                 $data = array(
+                    "current_user" => $this->AuthModel->current_user(),
                     'title' => 'Page Produk | Tambah',
                     'data_cat' => $get_cat,
                     'error' => $this->upload->display_errors()
@@ -161,6 +179,7 @@ class Dashboard extends CI_Controller
         }
         $get_cat = $this->Models->get('category');
         $data = array(
+            "current_user" => $this->AuthModel->current_user(),
             'title' => 'Page Produk | Tambah',
             'data_cat' => $get_cat
         );
@@ -226,6 +245,7 @@ class Dashboard extends CI_Controller
             $get = $this->Models->get_byid($id_product, 'product');
             $get_cat = $this->Models->get('category');
             $data = array(
+                "current_user" => $this->AuthModel->current_user(),
                 'title' => 'Page Produk | Edit',
                 'data_cat' => $get_cat,
                 'datas' => $get
@@ -266,6 +286,7 @@ class Dashboard extends CI_Controller
             $getimg = $this->Models->getimg('picture', $id);
 
             $data = array(
+                "current_user" => $this->AuthModel->current_user(),
                 'title'     => 'Page Product | Detail',
                 'datas'     => $get,
                 'dataimg'   => $getimg
@@ -290,6 +311,7 @@ class Dashboard extends CI_Controller
                 $getimg = $this->Models->getimg('picture', $id);
 
                 $data = array(
+                    "current_user" => $this->AuthModel->current_user(),
                     'title'     => 'Page Product | Detail',
                     'datas'     => $get,
                     'dataimg'   => $getimg,
@@ -354,6 +376,7 @@ class Dashboard extends CI_Controller
     {
         $get = $this->Models->get('category');
         $data = array(
+            "current_user" => $this->AuthModel->current_user(),
             'title' => 'Page Kategori',
             'datas' => $get
         );
@@ -381,6 +404,7 @@ class Dashboard extends CI_Controller
         }
 
         $data = array(
+            "current_user" => $this->AuthModel->current_user(),
             'title' => 'Page Kategori | Tambah'
         );
         $this->load->view('admin/templates/header', $data);
@@ -402,6 +426,7 @@ class Dashboard extends CI_Controller
         if ($val->run() === FALSE) {
             $get = $this->Models->get_byid($id_category, 'category');
             $data = array(
+                "current_user" => $this->AuthModel->current_user(),
                 'title' => 'Page Kategori | Edit',
                 'datas' => $get
             );
@@ -432,6 +457,7 @@ class Dashboard extends CI_Controller
     {
         $get = $this->Models->get('about');
         $data = array(
+            "current_user" => $this->AuthModel->current_user(),
             'title'     => 'Page About',
             'datas'     => $get
         );

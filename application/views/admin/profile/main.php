@@ -30,9 +30,9 @@
                                 <img class="profile-user-img img-fluid img-circle" src="<?= base_url() ?>assets/admin/dist/img/crooked.jpg" alt="User profile picture">
                             </div>
 
-                            <h3 class="profile-username text-center">Crooked Admin</h3>
+                            <h3 class="profile-username text-center"><?= $current_user->nama_user ?></h3>
 
-                            <p class="text-muted text-center">Administrator</p>
+                            <p class="text-muted text-center"><?= $current_user->username ?></p>
 
                             <ul class="list-group list-group-unbordered mb-3">
                                 <li class="list-group-item">
@@ -43,7 +43,7 @@
                                 </li>
                             </ul>
 
-                            <a href="<?=base_url('login')?>" class="btn btn-danger btn-block"><i class="fas fa-sign-out-alt mr-lg-1"></i> <b>Keluar</b></a>
+                            <a href="<?=base_url('logout')?>" class="btn btn-danger btn-block"><i class="fas fa-sign-out-alt mr-lg-1"></i> <b>Keluar</b></a>
                         </div>
                         <!-- /.card-body -->
                     </div>
@@ -58,13 +58,13 @@
                         <div class="card-body">
                             <form>
                                 <div class="form-group">
-                                    <label for="inputName">Nama</label>
-                                        <input type="email" class="form-control" id="inputName" placeholder="Nama">
+                                    <label for="">Nama</label>
+                                        <input type="text" name="nama_user" class="form-control" value="<?= $current_user->nama_user ?>" placeholder="Nama">
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label for="inputSkills">Username</label>
-                                        <input type="text" class="form-control" id="inputSkills" placeholder="Username">
+                                    <label for="">Username</label>
+                                        <input type="text" name="usernmae" class="form-control" value="<?= $current_user->username ?>" placeholder="Username">
                                 </div>
                                 
                             </form>
