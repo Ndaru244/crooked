@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 23 Sep 2022 pada 15.42
+-- Waktu pembuatan: 24 Sep 2022 pada 05.48
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -77,7 +77,7 @@ CREATE TABLE `product` (
   `product_name` varchar(250) NOT NULL,
   `product_price` varchar(50) NOT NULL,
   `id_category` int(11) NOT NULL,
-  `status_sale` varchar(20) NOT NULL,
+  `price_sale` varchar(50) NOT NULL,
   `product_description` varchar(500) NOT NULL,
   `product_picture` varchar(100) NOT NULL,
   `link_tokopedia` text NOT NULL,
@@ -104,7 +104,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `nama_user`, `username`, `password`) VALUES
-(23, 'Crooked Admin', 'crooked', '$2y$10$KMgs5DJQwPOtvUPbVVKhY.sY8k0ROo/US.JwIeSWr2cYHJHPZadMq');
+(1, 'Crooked Admin', 'crooked', '$2y$10$zcapPKgV2KkBHPFlbiq53egTngCLJVztwz4zch.m7PqhvbuM.wd3G');
 
 --
 -- Indexes for dumped tables
@@ -154,25 +154,25 @@ ALTER TABLE `about`
 -- AUTO_INCREMENT untuk tabel `category`
 --
 ALTER TABLE `category`
-  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `picture`
 --
 ALTER TABLE `picture`
-  MODIFY `id_picture` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_picture` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `product`
 --
 ALTER TABLE `product`
-  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

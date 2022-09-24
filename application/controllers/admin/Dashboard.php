@@ -10,11 +10,11 @@ class Dashboard extends CI_Controller
         parent::__construct();
         $this->load->model('Models');
         $this->load->model('AuthModel');
-		if(!$this->AuthModel->current_user()){
-            $this->session->set_flashdata('message_login_error','
+        if (!$this->AuthModel->current_user()) {
+            $this->session->set_flashdata('message_login_error', '
             Login Terlebih Dahulu Sebelum Mengakses Dashboard!!
             ');
-			redirect(base_url('login'));
+            redirect(base_url('login'));
         }
     }
 
@@ -34,22 +34,23 @@ class Dashboard extends CI_Controller
         $this->load->view('admin/templates/footer');
     }
 
+    /* Profile */
     public function profile($id)
     {
         $id_user = array('id_user' => $id);
         $val = $this->form_validation;
         $val->set_rules(
-			'nama_user',
-			'Nama User',
-			'required',
-			array('required' => '%s Harus Di Isi !')
-		);
-		$val->set_rules(
-			'username',
-			'Username',
-			'required',
-			array('required' => '%s Harus Di Isi !')
-		);
+            'nama_user',
+            'Nama User',
+            'required',
+            array('required' => '%s Harus Di Isi !')
+        );
+        $val->set_rules(
+            'username',
+            'Username',
+            'required',
+            array('required' => '%s Harus Di Isi !')
+        );
         if ($val->run() === FALSE) {
             $get = $this->Models->get_byid($id_user, 'users');
             $data = array(
@@ -57,8 +58,8 @@ class Dashboard extends CI_Controller
                 'title' => 'Profil | Settings',
                 'datas' => $get
             );
-            $this->load->view('admin/templates/header',$data);
-            $this->load->view('admin/profile/main',$data);
+            $this->load->view('admin/templates/header', $data);
+            $this->load->view('admin/profile/main', $data);
             $this->load->view('admin/templates/footer');
         } else {
             $data = array(
@@ -67,7 +68,7 @@ class Dashboard extends CI_Controller
             );
             $this->Models->put($id_user, 'users', $data);
             $this->session->set_flashdata('sukses', 'Berhasil mengedit data');
-            redirect(base_url('admin/profile/'.$id), 'refresh');
+            redirect(base_url('admin/profile/' . $id), 'refresh');
         }
     }
 
@@ -76,17 +77,17 @@ class Dashboard extends CI_Controller
         $id_user = array('id_user' => $id);
         $val = $this->form_validation;
         $val->set_rules(
-			'password',
-			'Password Baru',
-			'required|min_length[6]',
-			array('required' => '%s Harus Di Isi !!', 'min_length' => '%s minimal 6 karakter')
-		);
-		$val->set_rules(
-			'password_confirm',
-			'Konfiramsi Password',
-			'required|min_length[6]|matches[password]',
-			array('required' => '%s Harus Di Isi !', 'min_length' => '%s minimal 6 karakter', 'matches' => '%s tidak sama')
-		);
+            'password',
+            'Password Baru',
+            'required|min_length[6]',
+            array('required' => '%s Harus Di Isi !!', 'min_length' => '%s minimal 6 karakter')
+        );
+        $val->set_rules(
+            'password_confirm',
+            'Konfiramsi Password',
+            'required|min_length[6]|matches[password]',
+            array('required' => '%s Harus Di Isi !', 'min_length' => '%s minimal 6 karakter', 'matches' => '%s tidak sama')
+        );
         if ($val->run() === FALSE) {
             $get = $this->Models->get_byid($id_user, 'users');
             $data = array(
@@ -94,19 +95,19 @@ class Dashboard extends CI_Controller
                 'title' => 'Profil | Security',
                 'datas' => $get
             );
-            $this->load->view('admin/templates/header',$data);
-            $this->load->view('admin/profile/changePass',$data);
+            $this->load->view('admin/templates/header', $data);
+            $this->load->view('admin/profile/changePass', $data);
             $this->load->view('admin/templates/footer');
         } else {
             $data = array(
-                'password' => password_hash($this->input->post('password'),PASSWORD_DEFAULT)
+                'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT)
             );
             $this->Models->put($id_user, 'users', $data);
             $this->session->set_flashdata('sukses', 'Berhasil mengubah Password');
-            redirect(base_url('admin/profile/security/'.$id), 'refresh');
+            redirect(base_url('admin/profile/security/' . $id), 'refresh');
         }
-        
     }
+    /* End Profile */
 
     /*Product*/
     public function product()
@@ -174,6 +175,12 @@ class Dashboard extends CI_Controller
             'required',
             array('required' => '%s Harus Diisi')
         );
+        $val->set_rules(
+            'price_sale',
+            'Hagra Sales',
+            'min_length[0]',
+            array('min_length' => '%s Harus Lebih Dari 0')
+        );
 
         if ($val->run()) {
             $config['upload_path'] = './assets/product_images';
@@ -220,6 +227,7 @@ class Dashboard extends CI_Controller
                     'link_shopee'           => $this->input->post('link_shopee'),
                     'link_tiktok'           => $this->input->post('link_tiktok'),
                     'link_lazada'           => $this->input->post('link_lazada'),
+                    'price_sale'            => $this->input->post('price_sale'),
                     'product_picture'       => $upload['upload_data']['file_name']
                 );
 
@@ -292,6 +300,12 @@ class Dashboard extends CI_Controller
             'required',
             array('required' => '%s Harus Diisi')
         );
+        $val->set_rules(
+            'price_sale',
+            'Hagra Sales',
+            'min_length[0]',
+            array('min_length' => '%s Harus Lebih Dari 0')
+        );
 
         if ($val->run() === FALSE) {
             $get = $this->Models->get_byid($id_product, 'product');
@@ -315,7 +329,8 @@ class Dashboard extends CI_Controller
                 'link_tokopedia'        => $this->input->post('link_tokopedia'),
                 'link_shopee'           => $this->input->post('link_shopee'),
                 'link_tiktok'           => $this->input->post('link_tiktok'),
-                'link_lazada'           => $this->input->post('link_lazada')
+                'link_lazada'           => $this->input->post('link_lazada'),
+                'price_sale'            => $this->input->post('price_sale'),
             );
             $this->Models->put($id_product, 'product', $data);
             $this->session->set_flashdata('sukses', 'Berhasil mengedit data');
@@ -334,14 +349,16 @@ class Dashboard extends CI_Controller
         );
         if ($val->run() === FALSE) {
             $id_product = array('id_product' => $id);
-            $get = $this->Models->get_byid($id_product, 'product');
+            $get    = $this->Models->get_byid($id_product, 'product');
             $getimg = $this->Models->getimg('picture', $id);
+            $getcat = $this->Models->getcat('category', $get->id_category);
 
             $data = array(
                 "current_user" => $this->AuthModel->current_user(),
                 'title'     => 'Page Product | Detail',
                 'datas'     => $get,
-                'dataimg'   => $getimg
+                'dataimg'   => $getimg,
+                'datacat'   => $getcat
             );
 
             $this->load->view('admin/templates/header', $data);
@@ -505,6 +522,7 @@ class Dashboard extends CI_Controller
     }
     /* End Category */
 
+    /* About */
     public function about()
     {
         $get = $this->Models->get('about');
@@ -569,6 +587,7 @@ class Dashboard extends CI_Controller
             redirect(base_url('admin/about-setting'), 'refresh');
         }
     }
+    /* End About */
 }
 
 /* End of file Dashboard.php */

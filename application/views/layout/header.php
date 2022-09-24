@@ -53,10 +53,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             <li>
                                 <h6 class="dropdown-header" href="#!">Kategori</h6>
                             </li>
-                            <?php foreach($getcat as $cat) : ?>
-                            <li>
-                                <a class="dropdown-item" href="<?=base_url('main/shopping/category/'.$cat->id_category )?>"><?= $cat->category_name ?></a>
-                            </li>
+                            <?php foreach ($getcat as $cat) : ?>
+                                <li>
+                                    <a class="dropdown-item" href="<?= base_url('main/shopping/category/' . $cat->id_category) ?>"><?= $cat->category_name ?></a>
+                                </li>
                             <?php endforeach; ?>
                         </ul>
                     </li>
