@@ -110,8 +110,8 @@ class Dashboard extends CI_Controller
             $config['upload_path'] = './assets/product_images';
             $config['allowed_types'] = 'gif|jpg|jpeg|png';
             $config['max_size'] = '2400';
-            $config['max_width'] = '2024';
-            $config['max_height'] = '2024';
+            $config['max_width'] = '6000';
+            $config['max_height'] = '6000';
 
             $this->upload->initialize($config);
             $this->load->library('upload', $config);
@@ -278,8 +278,8 @@ class Dashboard extends CI_Controller
             $config['upload_path'] = './assets/product_images';
             $config['allowed_types'] = 'gif|jpg|jpeg|png';
             $config['max_size'] = '2400';
-            $config['max_width'] = '2024';
-            $config['max_height'] = '2024';
+            $config['max_width'] = '6000';
+            $config['max_height'] = '6000';
 
             $this->upload->initialize($config);
             $this->load->library('upload', $config);

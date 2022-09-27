@@ -59,7 +59,7 @@
                   foreach ($datas as $get) : ?>
                     <tr>
                       <td>
-                        <img class="rounded img-thumbnail mx-auto d-block" src="<?= base_url('/assets/product_images/thumbs/' . $get->product_picture) ?>" style="width: 50%;" />
+                        <img class="rounded img-thumbnail mx-auto d-block" src="<?= base_url('/assets/product_images/' . $get->product_picture) ?>" style="width: 50%;" />
                       </td>
                       <td><?= $get->product_name ?></td>
                       <td>Rp.<?= number_format($get->product_price, 0, ',', '.') ?></td>
