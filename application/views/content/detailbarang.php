@@ -22,18 +22,21 @@
                     </div>
                     <div class="col-md-6">
                         <div class="small mb-1">
-                            <?php
-                            foreach ($getcat as $cat) :
-                                if ($datas->id_category === $cat->id_category) {
-                                    echo $cat->category_name;
-                                }
-                            endforeach;
-                            ?>
+                            <i>Kategori: <b><?= $datacat->category_name ?> </b></i>
                         </div>
                         <h1 class="display-5 fw-bolder"><?= $datas->product_name ?></h1>
+                        <?= $datas->price_sale == 0 ? "" : "<span class='badge fw-bolder bg-danger text-white'>onsale</span><br>" ?>
                         <div class="fs-5 mb-5">
-                            <!-- <span class="text-decoration-line-through"></span> -->
-                            <span>Rp.<?= number_format($datas->product_price, 0, ',', '.') ?></span>
+                            
+                            <?php
+                            if ($datas->price_sale == 0) {
+                                echo " <span>Rp." . number_format($datas->product_price, 0, ',', '.') . "</span>";
+                            } elseif ($datas->price_sale != 0) {
+                                echo "
+                                <span class='text-muted text-decoration-line-through'><small><i>Rp." . number_format($datas->product_price, 0, ',', '.') . "</i></small></span><br>
+                                <span>Rp." . number_format($datas->price_sale, 0, ',', '.') . "</span>";
+                            }
+                            ?>
                         </div>
                         <p class="lead"><?= $datas->product_description ?></p>
                         <div class="row">

@@ -25,7 +25,7 @@
         <div class="col-12">
           <div class="callout callout-info bg-primary">
             <h5><i class="fas fa-grin"></i> Welcome!</h5>
-            Selamat datang, Admin
+            Selamat datang, <b class="title"><?= $current_user->nama_user ?></b>
           </div>
         </div>
       </div>

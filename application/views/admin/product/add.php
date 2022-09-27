@@ -48,8 +48,16 @@
                                 <input type="text" name="product_name" class="form-control" placeholder="Nama Produk" required>
                             </div>
                             <div class="form-group">
-                                <label for="">Harga Produk</label>
-                                <input type="number" name="product_price" class="form-control" placeholder="Harga Produk" min=1 required>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="">Harga Produk</label>
+                                        <input type="number" name="product_price" class="form-control" placeholder="Harga Produk" min='0' required>
+                                    </div>
+                                    <div class="col">
+                                        <label for="">Harga Sales <i>(Opsional)</i></label>
+                                        <input type="number" name="price_sale" class="form-control" value="0" min="0">
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="">Kategori Produk</label>
@@ -62,7 +70,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Deskripsi Produk</label>
-                                <textarea name="product_description" class="form-control" id="summernote" required>Deskripsi</textarea>
+                                <textarea name="product_description" class="form-control" id="summernote" required></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="">Link Olsop Produk</label>
@@ -73,7 +81,7 @@
                                     <div class="col"><input type="url" name="link_lazada" class="form-control" placeholder="Link Lazada" required></div>
                                 </div>
                             </div>
-                            <div class="form-grup">
+                            <div class="form-group">
                                 <label for="">Upload Gambar</label>
                                 <img class="rounded img-thumbnail mx-auto d-block" id="blah" src="<?= base_url('/assets/admin/dist/img/default-img.png') ?>" alt="..." style="width: 25%;" />
                                 <div class="custom-file">

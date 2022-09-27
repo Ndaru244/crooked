@@ -24,6 +24,8 @@
                 <?php foreach ($datas as $get) :?>
                 <div class="col mb-5">
                     <div class="card h-100">
+                        <!-- Sale badge-->
+                        <?= $get->price_sale == 0 ? "" : "<div class='badge bg-danger text-white position-absolute' style='top: 0.5rem; right: 0.5rem'><b>On Sale</b></div>" ?>
                         <!-- Product image-->
                         <img class="card-img-top" src="<?= base_url('assets/product_images/'.$get->product_picture)?>" alt="..." />
                         <!-- Product details-->
@@ -32,7 +34,15 @@
                                 <!-- Product name-->
                                 <h5 class="fw-bolder"><?= $get->product_name ?></h5>
                                 <!-- Product price-->
-                                Rp.<?= number_format($get->product_price, 0 ,',','.') ?>
+                                <?php
+                                if ($get->price_sale == 0) {
+                                    echo 'Rp.'.number_format($get->product_price, 0 ,',','.');
+                                } elseif ($get->price_sale != 0) {
+                                    echo "
+                                    <span class='text-muted text-decoration-line-through'><i>Rp.".number_format($get->product_price, 0, ',', '.')."</i></span>
+                                     <br/> Rp.".number_format($get->price_sale, 0, ',', '.')."";
+                                }
+                                ?>
                             </div>
                         </div>
                         <!-- Product actions-->

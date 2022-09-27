@@ -32,6 +32,11 @@ class UserModels extends CI_Model
         $query = $this->db->get($tabel);
         return $query->result();
     }
+    public function getcat($tabel, $idcat){
+        $this->db->where('id_category', $idcat);
+        $query = $this->db->get($tabel);
+        return $query->row();
+    }
 
     public function countbycat($idcat, $tabel){
         $this->db->where('id_category',$idcat);

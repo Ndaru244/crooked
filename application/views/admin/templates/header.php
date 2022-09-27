@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= $title ?></title>
-
+  <!-- Icon -->
+  <link rel="icon" type="image/x-icon" href="<?= base_url("assets/logocrookedputih.jpg") ?>" />
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -65,19 +66,19 @@
           <i class="fas fa-user-alt"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="<?=base_url('admin/profile')?>" class="dropdown-item">
+          <a href="<?=base_url('admin/profile/'.$current_user->id_user)?>" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
               <img src="<?=base_url()?>assets/admin/dist/img/crooked.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
-                <h3 class="dropdown-item-title">Crooked Admin</h3>
-                <p class="text-sm text-muted">Administrator</p>
+                <h3 class="dropdown-item-title"><?= $current_user->nama_user ?></h3>
+                <p class="text-sm text-muted">@<?= $current_user->username ?></p>
               </div>
             </div>
             <!-- Message End -->
           </a>
           <div class="dropdown-divider"></div>
-          <a href="<?=base_url('login')?>" class="dropdown-item dropdown-footer text-danger"><i class="fas fa-sign-out-alt mr-lg-1"></i><b>Keluar</b></a>
+          <a href="<?=base_url('logout')?>" class="dropdown-item dropdown-footer text-danger"><i class="fas fa-sign-out-alt mr-lg-1"></i><b>Keluar</b></a>
         </div>
       </li>
       

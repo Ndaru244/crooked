@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'main';
-$route['404_override'] = '';
+$route['404_override'] = 'custom404';
 $route['translate_uri_dashes'] = FALSE;
 
 /* Front-End  Routers Pages */
@@ -62,6 +62,7 @@ $route['main/shopping/koleksi'] = 'main/koleksi';
 
 /* Front-End Routers Pages */
 $route['login'] = 'auth';
+$route['logout'] = 'auth/logout';
 $route['admin/dashboard'] = 'admin/dashboard';
 
 $route['admin/product'] = 'admin/dashboard/product';
@@ -79,5 +80,5 @@ $route['admin/category/delete/(:any)'] = 'admin/dashboard/category_delete/$1';
 $route['admin/about-setting'] = 'admin/dashboard/about';
 $route['admin/about_update/(:any)'] = 'admin/dashboard/about_update/$1';
 
-$route['admin/profile'] = 'admin/dashboard/profile';
-$route['admin/profile/security'] = 'admin/dashboard/change_pass';
+$route['admin/profile/(:any)'] = 'admin/dashboard/profile/$1';
+$route['admin/profile/security/(:any)'] = 'admin/dashboard/change_pass/$1';

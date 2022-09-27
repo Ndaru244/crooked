@@ -32,19 +32,27 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="">Nama Produk</label>
-                                <input type="text" name="nama_brg" class="form-control" value="<?= $datas->product_name ?>" placeholder="Nama Barang" disabled>
+                                <input type="text" class="form-control" value="<?= $datas->product_name ?>" disabled>
                             </div>
                             <div class="form-group">
-                                <label for="">Harga Produk</label>
-                                <input type="number" name="harga_brg" class="form-control" value="<?= $datas->product_price ?>" placeholder="Harga Barang" min=1 disabled>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="">Harga Produk</label>
+                                        <input type="number" class="form-control" value="<?= $datas->product_price ?>" min=1 disabled>
+                                    </div>
+                                    <div class="col">
+                                        <label for="">Harga Sales</label>
+                                        <input type="number" class="form-control" value="<?= $datas->price_sale ?>" min=1 disabled>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="">Kategori Produk</label>
-                                <input type="text" name="nama_brg" class="form-control" value="<?= $datas->id_category ?>" placeholder="Nama Barang" disabled>
+                                <input type="text" class="form-control" value="<?= $datacat->category_name ?>" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="">Deskripsi Produk</label>
-                                <textarea name="ket_brg" class="form-control" rows="3" disabled><?= $datas->product_description ?></textarea>
+                                <textarea class="form-control" rows="3" disabled><?= $datas->product_description ?></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="">Link olsop Produk</label>
@@ -100,7 +108,7 @@
                                             <td>
                                                 <img class="rounded img-thumbnail mx-auto d-block" src="<?= base_url('/assets/product_images/' . $datas->product_picture) ?>" style="width: 50%;" />
                                             </td>
-                                            <td><a href="#" class="btn btn-sm disabled btn-danger" style="cursor: not-allowed;">Hapus</a></td>
+                                            <td><a href="#" class="btn btn-sm disabled btn-primary" style="cursor: not-allowed;">Master</a></td>
                                         </tr>
                                         <?php $no = 2;
                                         foreach ($dataimg as $get) : ?>

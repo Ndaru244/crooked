@@ -28,11 +28,13 @@ class Main extends CI_Controller {
 		$get = $this->UserModels->get_byid($id_product, 'product');
 		$getimg = $this->UserModels->getimg('picture', $id);
 		$getcat = $this->UserModels->get('category');
+		$datacat = $this->UserModels->getcat('category', $get->id_category);
 		$data = array(
 			'title'		=> 'Crooked IDN | Detail Product',
 			'datas'		=> $get,
 			'dataimg'	=> $getimg,
-			'getcat'	=> $getcat
+			'getcat'	=> $getcat,
+			'datacat'	=> $datacat
 		);
 
 		$this->load->view('layout/header',$data);

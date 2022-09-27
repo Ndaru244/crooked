@@ -48,8 +48,16 @@
                                 <input type="text" name="product_name" class="form-control" value="<?= $datas->product_name ?>" required>
                             </div>
                             <div class="form-group">
-                                <label for="">Harga Produk</label>
-                                <input type="number" name="product_price" class="form-control" value="<?= $datas->product_price ?>" min=1 required>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="">Harga Produk</label>
+                                        <input type="number" name="product_price" class="form-control" value="<?= $datas->product_price ?>" min=1 required>
+                                    </div>
+                                    <div class="col">
+                                        <label for="">Harga Sales <i>(Opsional)</i></label>
+                                        <input type="number" name="price_sale" class="form-control" value="<?= $datas->price_sale ?>" min=0 max="<?= $datas->product_price ?>" required>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="">Kategori Produk</label>

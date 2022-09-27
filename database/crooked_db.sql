@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 11 Sep 2022 pada 19.21
+-- Waktu pembuatan: 24 Sep 2022 pada 05.48
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -41,7 +41,7 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`id_about`, `about_text`, `address`, `phone_number`, `instagram`, `tiktok`) VALUES
-(1, 'awdw', 'test satu dua tiga', '08569567567567', 'awd', 'awd');
+(1, 'Test', 'Test', '08569000000', 'test', 'test');
 
 -- --------------------------------------------------------
 
@@ -53,13 +53,6 @@ CREATE TABLE `category` (
   `id_category` int(11) NOT NULL,
   `category_name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `category`
---
-
-INSERT INTO `category` (`id_category`, `category_name`) VALUES
-(4, 'testing');
 
 -- --------------------------------------------------------
 
@@ -84,20 +77,14 @@ CREATE TABLE `product` (
   `product_name` varchar(250) NOT NULL,
   `product_price` varchar(50) NOT NULL,
   `id_category` int(11) NOT NULL,
-  `status_sale` varchar(20) NOT NULL,
+  `price_sale` varchar(50) NOT NULL,
   `product_description` varchar(500) NOT NULL,
   `product_picture` varchar(100) NOT NULL,
   `link_tokopedia` text NOT NULL,
   `link_shopee` text NOT NULL,
-  `link_tiktok` text NOT NULL
+  `link_tiktok` text NOT NULL,
+  `link_lazada` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `product`
---
-
-INSERT INTO `product` (`id_product`, `product_name`, `product_price`, `id_category`, `status_sale`, `product_description`, `product_picture`, `link_tokopedia`, `link_shopee`, `link_tiktok`) VALUES
-(5, 'spatu', '95000', 4, '', '<u>Deskripsi</u>', 'prod-1.jpg', '3wed', '5rd4e', '3we34e');
 
 -- --------------------------------------------------------
 
@@ -117,7 +104,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `nama_user`, `username`, `password`) VALUES
-(21, 'awd', 'ndaru244', '$2y$10$qUPLG1pq5DuLyuxAf9uzU..LsbgNUlLY3t3FyDskm3aPY6Dn0tBYO');
+(1, 'Crooked Admin', 'crooked', '$2y$10$zcapPKgV2KkBHPFlbiq53egTngCLJVztwz4zch.m7PqhvbuM.wd3G');
 
 --
 -- Indexes for dumped tables
@@ -167,25 +154,25 @@ ALTER TABLE `about`
 -- AUTO_INCREMENT untuk tabel `category`
 --
 ALTER TABLE `category`
-  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `picture`
 --
 ALTER TABLE `picture`
-  MODIFY `id_picture` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_picture` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `product`
 --
 ALTER TABLE `product`
-  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
