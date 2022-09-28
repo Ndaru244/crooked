@@ -27,7 +27,7 @@
                         <!-- Sale badge-->
                         <?= $get->price_sale == 0 ? "" : "<div class='badge bg-danger text-white position-absolute' style='top: 0.5rem; right: 0.5rem'><b>On Sale</b></div>" ?>
                         <!-- Product image-->
-                        <img class="card-img-top" src="<?= base_url('assets/product_images/thumbs/'.$get->product_picture)?>" alt="..." />
+                        <img class="card-img-top" src="<?= base_url('assets/product_images/'.$get->product_picture)?>" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
