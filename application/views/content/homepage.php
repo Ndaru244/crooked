@@ -2,7 +2,7 @@
     <header>
         <div class="overlay"></div>
         <video preload="" playsinline="" autoplay="" muted="" loop="" __idm_id__="2670593">
-            <source src="<?= base_url() ?>assets/headervid.m4v" type="video/mp4">
+            <source src="assets/headervid.m4v" type="video/mp4">
         </video>
      
 
