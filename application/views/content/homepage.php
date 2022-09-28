@@ -4,7 +4,6 @@
         <video preload="" playsinline="" autoplay="" muted="" loop="" __idm_id__="2670593">
             <source src="assets/headervid.m4v" type="video/mp4">
         </video>
-     
 
         <div class="container h-100">
             <div class="d-flex h-100 text-center align-items-center">
