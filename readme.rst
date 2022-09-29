@@ -3,8 +3,8 @@ Crooked Indonesia
 
 Niagahoster account
 -------------------
-Username			: crookedindonesia@gmail.com
-Password			: Mati Tanam123
+Username			: crookedindonesia@gmail.com::
+Password			: Mati Tanam123::
 
 About Website
 -------------
