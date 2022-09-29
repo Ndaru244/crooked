@@ -11,5 +11,5 @@ About Website
 | Website 			: <https://crookedindonesia.com>
 
 Admin Login
-| * Username		: crooked
-| * Password		: Crooked2022
+| Username			: crooked
+| Password			: Crooked2022
