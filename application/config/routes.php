@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -60,7 +60,7 @@ $route['main/shopping/category/(:any)'] = 'main/category/$1';
 // $route['shopping'] = 'main/shopping';
 $route['main/shopping/koleksi'] = 'main/koleksi';
 
-/* Front-End Routers Pages */
+/* Back-End Routers Pages */
 $route['login'] = 'auth';
 $route['logout'] = 'auth/logout';
 $route['admin/dashboard'] = 'admin/dashboard';
