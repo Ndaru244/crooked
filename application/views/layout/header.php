@@ -46,7 +46,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 <hr class="dropdown-divider" />
                             </li>
                             <li><a class="dropdown-item" href="<?= base_url('main/shopping/koleksi') ?>">Koleksi</a></li>
-                            <li><a class="dropdown-item" href="#!">Sale</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('main/sale') ?>">Sale</a></li>
                             <li>
                                 <hr class="dropdown-divider" />
                             </li>

@@ -12,8 +12,8 @@ class UserModels extends CI_Model
 
     public function get_by_limit($table)
     {
-
         $this->db->limit(8);
+        $this->db->order_by('id_product', 'desc');
         $query = $this->db->get($table);
         return $query->result();
     }
@@ -32,25 +32,38 @@ class UserModels extends CI_Model
         $query = $this->db->get($tabel);
         return $query->result();
     }
-    public function getcat($tabel, $idcat){
+    public function getcat($tabel, $idcat)
+    {
         $this->db->where('id_category', $idcat);
         $query = $this->db->get($tabel);
         return $query->row();
     }
 
-    public function countbycat($idcat, $tabel){
-        $this->db->where('id_category',$idcat);
+    public function countbycat($idcat, $tabel)
+    {
+        $this->db->where('id_category', $idcat);
         $this->db->from($tabel);
         return $this->db->count_all_results();
     }
 
-    public function getbycat($idcat, $tabel, $limit, $start){
+    public function getbycat($idcat, $tabel, $limit, $start)
+    {
         $this->db->where('id_category', $idcat);
+        $this->db->order_by('id_product', 'desc');
         $query = $this->db->get($tabel, $limit, $start);
         return $query;
     }
 
-    function pagination($limit, $start){
+    public function getbysale($tabel, $limit, $start)
+    {
+        $this->db->where('price_sale !=', 0);
+        $this->db->order_by('id_product', 'desc');
+        $query = $this->db->get($tabel, $limit, $start);
+        return $query;
+    }
+
+    function pagination($limit, $start)
+    {
         $query = $this->db->get('product', $limit, $start);
         return $query;
     }
