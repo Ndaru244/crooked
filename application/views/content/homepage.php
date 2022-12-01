@@ -1,8 +1,11 @@
     <!-- Header-->
     <header>
         <div class="overlay"></div>
-        <video preload="" playsinline="" autoplay="" muted="" loop="" __idm_id__="2670593">
+        <video class="video-desktop" preload="" playsinline="" autoplay="" muted="" loop="">
             <source src="assets/headervid.m4v" type="video/mp4">
+        </video>
+        <video class="video-mobile" preload="" playsinline="" autoplay="" muted="" loop="">
+            <source src="assets/headermobile.mp4" type="video/mp4">
         </video>
 
         <div class="container h-100">
