@@ -140,12 +140,12 @@ header .overlay {
     left: 50%;
     min-width: 100%;
     min-height: 100%;
-    width: 100%    !important;
-    height: auto   !important;
+    width: 100% !important;
+    height: auto !important;
     z-index: 0;
-    -ms-transform: translateX(-100%) translateY(-100%);
-    -moz-transform: translateX(-100%) translateY(-100%);
-    -webkit-transform: translateX(-100%) translateY(-100%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
   }
 }
