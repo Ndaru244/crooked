@@ -20,10 +20,12 @@ Teknologi yang Digunakan
 
 Preview Proyek
 --------------
-![Halaman Utama](https://i.ibb.co/7J1J1Zz/crooked-1.png)
-![Halaman Detail Produk](https://i.ibb.co/7J1J1Zz/crooked-2.png)
-![Halaman Admin - Tambah Produk](https://i.ibb.co/7J1J1Zz/crooked-4.png)
-![Halaman Admin - Tambah Kategori](https://i.ibb.co/7J1J1Zz/crooked-5.png)
+
+.. image:: ./crooked-preview/crooked-1.png :alt: Halaman Utama :width: 600px :align: center
+.. image:: ./crooked-preview/crooked-2.png :alt: Halaman Produk :width: 600px :align: center
+.. image:: ./crooked-preview/crooked-3.png :alt: Halaman Detail Produk :width: 600px :align: center
+.. image:: ./crooked-preview/crooked-admin-1.png :alt: Halaman Admin - Tambah Produk :width: 600px :align: center
+.. image:: ./crooked-preview/crooked-admin-2.png :alt: Halaman Admin - Tambah Kategori :width: 600px :align: center
 
 Cara Menjalankan Proyek
 -----------------------
