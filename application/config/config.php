@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $server = $_SERVER['HTTP_HOST'];
-$config['base_url'] = 'http://'.$server.'/crooked';
+$config['base_url'] = 'http://php74.local/crooked';
 
 /*
 |--------------------------------------------------------------------------
