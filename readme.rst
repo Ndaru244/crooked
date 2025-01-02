@@ -21,11 +21,11 @@ Teknologi yang Digunakan
 Preview Proyek
 --------------
 
-.. image:: https://raw.githubusercontent.com/Ndaru244/crooked/refs/heads/main/crooked-preview/crooked-1.png :alt: Halaman Utama :width: 600px :align: center
-.. image:: https://raw.githubusercontent.com/Ndaru244/crooked/refs/heads/main/crooked-preview/crooked-2.png :alt: Halaman Produk :width: 600px :align: center
-.. image:: https://raw.githubusercontent.com/Ndaru244/crooked/refs/heads/main/crooked-preview/crooked-3.png :alt: Halaman Detail Produk :width: 600px :align: center
-.. image:: https://raw.githubusercontent.com/Ndaru244/crooked/refs/heads/main/crooked-preview/crooked-admin-1.png :alt: Halaman Admin - Tambah Produk :width: 600px :align: center
-.. image:: https://raw.githubusercontent.com/Ndaru244/crooked/refs/heads/main/crooked-preview/crooked-admin-2.png :alt: Halaman Admin - Tambah Kategori :width: 600px :align: center
+.. image:: https://github.com/Ndaru244/portfolio/blob/main/assets/img/preview/crooked-1.png :alt: Halaman Utama :width: 600px :align: center
+.. image:: https://github.com/Ndaru244/portfolio/blob/main/assets/img/preview/crooked-2.png :alt: Halaman Produk :width: 600px :align: center
+.. image:: https://github.com/Ndaru244/portfolio/blob/main/assets/img/preview/crooked-3.png :alt: Halaman Detail Produk :width: 600px :align: center
+.. image:: https://github.com/Ndaru244/portfolio/blob/main/assets/img/preview/crooked-admin-1.png :alt: Halaman Admin - Tambah Produk :width: 600px :align: center
+.. image:: https://github.com/Ndaru244/portfolio/blob/main/assets/img/preview/crooked-admin-2.png :alt: Halaman Admin - Tambah Kategori :width: 600px :align: center
 
 Cara Menjalankan Proyek
 -----------------------
